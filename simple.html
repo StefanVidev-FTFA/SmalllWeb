@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Message Box</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e7e7e7;
+        }
+        button:hover {
+            background-color: #d7d7d7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click a Button!</h1>
+
+    <button onclick="showMessage(1)">Button 1</button>
+    <button onclick="showMessage(2)">Button 2</button>
+    <button onclick="showMessage(3)">Button 3</button>
+
+    <script>
+        function showMessage(buttonNumber) {
+            // You can customize the messages here
+            let message = "";
+            switch(buttonNumber) {
+                case 1:
+                    message = "Hello! You clicked Button 1. Have a great day!";
+                    break;
+                case 2:
+                    message = "Greetings from Button 2! Thanks for clicking.";
+                    break;
+                case 3:
+                    message = "Button 3 here! This is a generic message.";
+                    break;
+                default:
+                    message = "A button was clicked!";
+            }
+            alert(message);
+        }
+    </script>
+
+</body>
+</html>
